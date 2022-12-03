@@ -64,6 +64,7 @@ public class HomeController {
 		List<MatchInfoDtl>pvpList = ServiceImpl.getMatchInfoDtl(nickname);
 		//List<MatchInfoDtl>pvpList2 = service.getAllMatchInfoDtl(nickname);
 		model.addAttribute("pvpList", pvpList );
+		model.addAttribute("nickname", nickname );
 		//model.addAttribute("pvpList2", pvpList2 );
 		
 		

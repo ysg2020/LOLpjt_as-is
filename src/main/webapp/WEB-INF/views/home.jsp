@@ -12,7 +12,7 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
-  <input id="Nickname" type="text" placeholder="Search for..." aria-label="Search for..." />
+  <input id="Nickname" type="text" placeholder="Search for..." aria-label="Search for..." value="${nickname}"/>
   <button type="button" onclick="search_click()">검색</button>
 
  <table id="example-table-1" >
@@ -157,8 +157,11 @@
 <script type="text/javascript">
 var df =document.myForm;
 var matchNum;
+
 $(document).ready(function(){  <!-- 로드 될때 검색한 내용을 표시해줌 -->
 	console.log("start");
+	document.getElementById("Nickname").value = nickname;
+	
 /* 	if(nickname != null){
 		$("#Nickname").val() = nickname;
 		console.log("start2");
@@ -169,6 +172,7 @@ function  search_click() {
 	var page ="/lol/search?nickname="+nickname;  <!-- 파라미터를 붙여서 컨트롤러가 맵핑 되게함 -->
 	
 	location.href=page;
+	
 	
 }
 function  fn_layer_popup() {
